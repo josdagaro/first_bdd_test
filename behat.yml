@@ -3,7 +3,7 @@ default:
     features: behat/features
   extensions:
     Behat\MinkExtension\Extension:
-      base_url: http://localhost/bddsample
+      base_url: http://localhost:8080/web/index.php/
       goutte: ~
   formatter:
     name: pretty,html

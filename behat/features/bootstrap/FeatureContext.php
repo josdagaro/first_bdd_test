@@ -10,7 +10,7 @@ require_once 'PHPUnit/Framework/Assert/Functions.php';
 class FeatureContext extends BehatContext
 {
 
-    static private $APP_URL = "http://localhost/bddsample/";
+    static private $APP_URL = "http://localhost:8080/web/index.php";
     private $session;
 
     /** @BeforeScenario */
@@ -26,7 +26,7 @@ class FeatureContext extends BehatContext
      */
     public function queEstoyEnLaAplicacion()
     {
-        $this->session->visit('http://localhost/bddsample');
+        $this->session->visit(self::$APP_URL);
     }
 
     /**
