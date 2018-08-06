@@ -8,6 +8,9 @@ services:
 env:
   - DOCKER_COMPOSE_VERSION=1.8.0
 
+before_install:
+  - composer install
+
 install:
   - docker-compose pull
 
