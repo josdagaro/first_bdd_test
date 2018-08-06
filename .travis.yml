@@ -13,4 +13,6 @@ before_install:
   - docker-compose up -d
 
 script:
-  - docker exec server bash -c '/var/www/html/bin/behat'
+  - docker-compose ps
+  - ll
+  - docker exec server bin/behat
