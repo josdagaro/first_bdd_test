@@ -13,4 +13,4 @@ before_install:
   - docker-compose up -d
 
 script:
-  - bin/behat
+  - php bin/behat
