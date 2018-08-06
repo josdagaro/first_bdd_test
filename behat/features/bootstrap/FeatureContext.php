@@ -10,7 +10,7 @@ require_once 'PHPUnit/Framework/Assert/Functions.php';
 class FeatureContext extends BehatContext
 {
 
-    static private $APP_URL = "http://localhost:8080/web/index.php";
+    static private $APP_URL = "http://localhost/web/index.php";
     private $session;
 
     /** @BeforeScenario */
