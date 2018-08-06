@@ -14,5 +14,5 @@ before_install:
 
 script:
   - docker-compose ps
-  - ll
+  - ls -la
   - docker exec server bin/behat
