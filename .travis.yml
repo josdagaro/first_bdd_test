@@ -11,6 +11,4 @@ env:
 before_install:
   - docker-compose pull
   - docker-compose up -d
-
-script:
   - docker exec server bin/behat
