@@ -32,17 +32,3 @@ push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 # Redirect to /dev/null to avoid secret leakage
 git push "$push_uri" "$BRANCH_TO_MERGE_INTO" >/dev/null 2>&1
 git push "$push_uri" :"$TRAVIS_BRANCH" >/dev/null 2>&1
-
-# Since Travis does a partial checkout, we need to get the whole thing
-repo_temp2=$(mktemp -d)
-git fetch "https://github.com/$GITHUB_REPO" "$repo_temp2"
-
-# shellcheck disable=SC2164
-cd "$repo_temp2"
-git checkout rc2
-git merge --ff-only "$TRAVIS_COMMIT"
-git push "$push_uri" rc2 >/dev/null 2>&1
-
-
-
-
