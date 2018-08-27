@@ -22,8 +22,8 @@ script:
   - docker exec server bin/behat
 
 after_success:
-  - "chmod a+x travis-automerge"
-  - "BRANCHES_TO_MERGE_REGEX='^\\w*' BRANCH_TO_MERGE_INTO=rc1 GITHUB_REPO=josdagaro/first_bdd_test travis-automerge"
+  - "chmod a+x ./travis-automerge"
+  - "BRANCHES_TO_MERGE_REGEX='^\\w*' BRANCH_TO_MERGE_INTO=rc1 GITHUB_REPO=josdagaro/first_bdd_test ./travis-automerge"
 
 branches:
   only:
